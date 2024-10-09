@@ -8,11 +8,12 @@ from handle_messages import MessageStatus, MESSAGES
 from groq import Groq
 
 
-os.environ["GROQ_API_KEY"] = "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"
+# os.environ["GROQ_API_KEY"] = YOUR API KEY
 
 CLIENT = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
 )
+# METEOBLUE_KEY = YOU METEOBLU KEY
 
 CURR_DATE = datetime.date.today()
 CURR_WEEKDAY = CURR_DATE.strftime("%A")
@@ -79,7 +80,7 @@ class Bot:
 
     def get_temperature(self):
         weather_response = requests.get(
-            f"http://my.meteoblue.com/packages/basic-day?lat={self.coordinates[0]}&lon={self.coordinates[1]}&apikey=wjfERQS1i2cv5p4k&expire=1924948800"
+            f"http://my.meteoblue.com/packages/basic-day?lat={self.coordinates[0]}&lon={self.coordinates[1]}&apikey=METEOBLUE_KEY"
         )
 
         if weather_response.status_code != 200:
