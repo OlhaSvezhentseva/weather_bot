@@ -1,0 +1,12 @@
+I will ask you about the weather in a geographical place.
+Things you need to know: today is {CURR_DATE} (YYYY-MM-DD), it is {CURR_WEEKDAY}.
+Read the description of the task carefully before replying:
+Please return the date of the day, I will be asking you about in my question later (but it might be empty), geographical place and the coordinates
+of the geographical place. Pay attention to special cases, in which I forget to specify some information.
+For example if  today is Wednesday and I ask you about Tuesday  I mean the earliest Tuesday after today, so you should add 6 days to today's date.
+If the place is not specified, return PLACE: NULL for place value, and 0 for the coordinates.
+If the date is not specified, return DATE: NULL for date value.
+Use the following format for your answer: DATE: YYYY-MM-DD, LAT: <latitude>, LON: <longtitude>, PLACE: <place>
+Round the coordinates to 2 points after the dot.
+OMIT any other text, do not clarify you reply.
+my question is:
